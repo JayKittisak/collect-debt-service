@@ -1,0 +1,10 @@
+exports.ordered = 'มีคำสั่งซื้อล่วงหน้า'
+exports.confirm = 'รถเร่รับคำสั่งซื้อแล้ว'
+exports.prepare = 'รถเร่กำลังจัดเตรียมสินค้าของคุณ'
+exports.prepared = 'รถเร่จัดเตรียมสินค้าของคุณเสร็จแล้ว'
+exports.delivery = 'รถเร่กำลังนำส่งสินค้าของคุณ'
+exports.cancel = 'คำสั่งซื้อถูกยกเลิกแล้ว'
+exports.success = 'คำสั่งซื้อเสร็จสิ้น'
+
+exports.called = 'มีลูกค้าเรียกรถเร่'
+exports.uncall = 'มีลูกค้ายกเลิกการเรียกรถเร่'
