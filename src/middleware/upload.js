@@ -6,7 +6,7 @@ const mkdirp = require('mkdirp')
   - in docker : /uploads/ เพราะ map volumn ออกมาหน้านอก
   - in dev : /home/ubuntu/rodray-server/uploads/
 */
-const uploadPath = "/home/ubuntu/rodray-server/uploads/"
+const uploadPath = "../files/"
 const imageFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image")) {
     cb(null, true);

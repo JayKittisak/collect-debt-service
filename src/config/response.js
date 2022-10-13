@@ -1,15 +1,20 @@
 const response = {}
-response['success'] = {
+response['Success'] = {
   response : 200,
   code : 'success',
   message : 'Success'
 }
-response['error'] = {
+response['Error'] = {
   response : 500,
   code : 'error',
   message : 'Error'
 }
-response['notfound'] = {
+response['Created'] = {
+  response : 201,
+  code : 'created',
+  message : 'Created'
+}
+response['NotFound'] = {
   response : 404,
   code : 'notfound',
   message : 'Not Found'
@@ -24,3 +29,4 @@ response['ParameterNotFound'] = {
   code : 'parameter_not_found',
   message : 'Parameter not complete.'
 }
+module.exports = response

@@ -1,12 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const config = require("./app/config/config")
-const controller = require("./app/controllers/controller");
+const config = require("./src/config/config")
+const controller = require("./src/controllers/controller");
 
 const app = express();
 
-const db = require("./app/models");
+const db = require("./src/models");
 
 var corsOptions = {
   origin: "*",
@@ -21,14 +21,15 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/api/",express.static("./app/view"));
+app.use("/api/",express.static("./src/view"));
 // simple route
 app.get("/", (req, res) => {
-  res.sendFile("./app/view/index.html", { root: __dirname });
+  res.sendFile("./src/view/index.html", { root: __dirname , versionMain:1});
 });
 
 // routes
-require("./app/routes/global.routes")(app);
+require("./src/routes/global.routes")(app);
+require("./src/routes/policy.routes")(app);
 
 // // attach this errorHandler just before you create the server
 // app.use(function(error, req, res, next){
